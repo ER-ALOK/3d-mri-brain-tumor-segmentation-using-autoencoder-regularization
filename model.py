@@ -2,13 +2,14 @@
 # 3D MRI Brain Tumor Segmentation Using Autoencoder Regularization
 # by Myronenko A. (https://arxiv.org/pdf/1810.11654.pdf)
 # Author of this code: Suyog Jadhav (https://github.com/IAmSUyogJadhav)
-
-import keras.backend as K
-from keras.losses import mse
-from keras.layers import Conv3D, Activation, Add, UpSampling3D, Lambda, Dense
-from keras.layers import Input, Reshape, Flatten, Dropout, SpatialDropout3D
-from keras.optimizers import adam
-from keras.models import Model
+import tensorflow as tf
+from tensorflow import keras
+import tensorflow.keras.backend as K
+from tensorflow.keras.losses import mse
+from tensorflow.keras.layers import Conv3D, Activation, Add, UpSampling3D, Lambda, Dense
+from tensorflow.keras.layers import Input, Reshape, Flatten, Dropout, SpatialDropout3D
+from tensorflow.keras.optimizers import adam
+from tensorflow.keras.models import Model
 try:
     from group_norm import GroupNormalization
 except ImportError:
